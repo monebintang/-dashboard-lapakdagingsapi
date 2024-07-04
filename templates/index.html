@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Kesegaran Daging Sapi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <!-- Ionic icons -->
+    <link href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <style>
+        
+        .upload-container {
+          text-align: center;
+          background: white;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      img {
+          margin-top: 20px;
+          max-width: 100%;
+          height: auto;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+      }
+        
+    </style>
+</head>
+<body>
+
+<!-- N A V B A R -->
+<nav class="navbar navbar-default navbar-expand-lg fixed-top custom-navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon ion-md-menu"></span>
+    </button>
+    <img src="{{ url_for('static', filename='img/logo1.png') }}" class="img-fluid nav-logo-mobile" alt="Company Logo" style="width: 250px; height: auto;">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="container">
+      	<img src="{{ url_for('static', filename='img/logo1.png') }}" class="img-fluid nav-logo-desktop" alt="Company Logo" style="width: 150px; height: auto;">
+        <ul class="navbar-nav ml-auto nav-right" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
+          <li class="nav-item nav-custom-link">
+            <a class="nav-link" href="{{ url_for('index')}}">Home <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+          </li>
+          <li class="nav-item nav-custom-link">
+            <a class="nav-link" href="#marketing">Kategori Warna <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+          </li>
+          <li class="nav-item nav-custom-link">
+            <a class="nav-link" href="#testimonials">Kategori Jenis <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+          </li>
+         <!--  <li class="nav-item nav-custom-link">
+            <a class="nav-link" href="#pricing">Deteksi <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+          </li> -->
+          <li class="nav-item nav-custom-link btn btn-demo-small" style="background-color: maroon; color: white;">
+            <a class="nav-link" href="#pricing">Cek Kesegaran Daging <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- E N D  N A V B A R -->
+
+ 
+<!-- H E R O -->
+<section id="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+          <img src="{{ url_for('static', filename='img/iphone3.png') }}" class="img-sm-fluid" alt="Demo image" style="width: 70%;">
+        </div>
+        <div class="col-md-7 content-box hero-content" style="color: maroon; text-align: justify;">
+          <span>Deteksi Kesegaran Daging Sapi Menggunakan GLCM & KNN</span>
+          <h1>Deteksi Kesegaran Daging Sapi di <b>Lapak Daging Segar</b></h1>
+          <p>Selamat datang di Website kami!, Anda bingung untuk mengetahui kesegaran daging yang layak untuk dikonsumsi atau tidak ? Yuk, cek kesagaran daging dengan aplikasi Lapak Daging Segar. .</p>
+          <br><a href="#marketing" class="btn btn-danger">Lanjut</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- E N D  H E R O -->
+
+  <!-- E N D  M A R K E T I N G -->
+  <section id="marketing">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="content-box" style="color: maroon; text-align: justify;">
+            <span>Warna Daging Sapi </span>
+            <h2>Kategori Warna Daging Sapi </h2>
+            <p>Warna daging menjadi salah satu kriteria utama dalam menilai kualitas daging, dan hal ini dapat dinilai secara langsung. Warna daging dipengaruhi oleh kandungan dan keadaan pigmen daging yang disebut mioglobin, yang dapat bervariasi tergantung pada jenis hewan, usia, jenis pakan, aktivitas otot, dan proses reaksi kimiawi dalam daging. Dalam konteks daging sapi segar yang berkualitas, warna merah cerah dianggap indikator kebaikan. Saat daging sapi baru dipotong dan belum terpapar udara, warnanya cenderung merah keunguan, tetapi setelah terkena udara selama 5-15 menit, warna tersebut akan berubah menjadi merah cerah yang diinginkan. </p>
+           <!-- <br> <a href="#testimonials" class="btn btn-danger">Lanjut</a>-->
+          </div>
+        </div>
+        <div class="col-md-4"><br><br><br>
+            <img src="{{ url_for('static', filename='img/warna.jpg') }}" class="img-fluid" alt="Demo image">
+            <img src="{{ url_for('static', filename='img/warna.jpg') }}" class="img-fluid" alt="Demo image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- E N D  M A R K E T I N G -->
+
+  <!-- T E S T I M O N I A L S -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="title-block" style="color: maroon; text-align: justify;">
+        <h2 style="text-align: center;">Jenis Jenis Kesegaran Daging Sapi</h2>
+        <p>Daging yang segar memiliki ciri khusus, yakni tidak lengket di tangan dan tidak berlendir saat disentuh. Di sisi lain, daging yang sudah busuk cenderung berlendir dan terasa lengket ketika disentuh menggunakan tangan </p>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="testimonial-box">
+            <div class="row personal-info">
+              <div class="col-md-4 col-xs-4">
+                <div class="profile-picture review-one"></div>
+              </div>
+              <div class="col-md-12 col-xs-12" style="color: maroon; text-align: justify;">
+                <h6 style="text-align: center;">Jesni Daging Segar</h6>
+                <small>Daging Berwarna Merah Menyala Terang Atau Merah Maroon</small>
+              </div>
+            </div>
+            <img src="{{ url_for('static', filename='img/SEGAR.jpeg') }}" class="img-fluid" alt="Demo image">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="testimonial-box">
+              <div class="row personal-info">
+                <div class="col-md-4 col-xs-4">
+                  <div class="profile-picture review-one"></div>
+                </div>
+                <div class="col-md-12 col-xs-12" style="color: maroon; text-align: justify;">
+                  <h6 style="text-align: center;">Jenis Daging Tidak Segar </h6>
+                  <small>Daging Berwarna Merah Pudar Mulai Berwarna Kecoklatan </small>
+                </div>
+              </div>
+              <img src="{{ url_for('static', filename='img/TIDAK SEGAR.jpeg') }}" class="img-fluid" alt="Demo image">
+            </div>
+          </div>
+        <div class="col-md-4">
+          <div class="testimonial-box">
+            <div class="row personal-info">
+              <div class="col-md-4 col-xs-4">
+                <div class="profile-picture review-one"></div>
+              </div>
+              <div class="col-md-12 col-xs-12" style="color: maroon; text-align: justify;">
+                <h6 style="text-align: center;">Jenis Daging Busuk </h6>
+                <small>Daging Berwara Putih atau Merah Pudar Keputihan dan Memiliki Banyak Lendir</small>
+              </div>
+            </div>
+            <img src="{{ url_for('static', filename='img/BUSUK.jpeg') }}" class="img-fluid" alt="Demo image">
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- E N D  T E S T I M O N I A L S -->
+
+  <!-- P R I C I N G -->
+  <section id="pricing">
+    <div class="container">
+      <div class="title-block" style="color: maroon; text-align: justify;">
+        <h2 style="text-align: center;">Deteksi Kesegaran Daging Sapi</h2>
+        <p>Silahkan masukan gambar atau foto daging sapi untuk dilakukan pengecekan apakah daging tersebut masih layak untuk di konsumsi atau tidak..</p>
+      </div>
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="pricing-box">
+            <h3 style="color: maroon; text-align: center;"><b>Cek Kesegaran Daging Sapi</b></h3>
+            <p style="text-align: center;">Silahkan Unggah Gambar Daging Sapi dibawah ini</p>
+            <div class="divider-light"></div>
+
+            <div class="text-center">
+           <!--   <h1>Deteksi Kesegaran Daging Sapi</h1> -->
+            <form id="uploadForm">
+                <input type="file" id="fileInput" name="file" accept="image/*">
+                 <button class="btn btn-danger">Cek Sekarang</button>  
+                <button class="btn btn-primary" id="resetButton">Reset</button>
+            </form> </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="pricing-box">
+            <h3 style="color: maroon; text-align: center;"><b> Deteksi Kesegaran Daging Sapi</b></h3>
+            <p style="text-align: center;">Berikut ini Hasil Deteksi Kesegaran Daging Sapi</p>
+            <div class="divider-light"></div>
+            
+            <div class="text-center">
+            <h3 style="color: maroon;"><div id="result"></div></h3>
+            <p><div id="recommendation"></div></p>
+            <div id="imagePreview"></div>
+        
+            <script>
+                document.getElementById('uploadForm').addEventListener('submit', async function(event) {
+                    event.preventDefault();
+                    const fileInput = document.getElementById('fileInput');
+                    const formData = new FormData();
+                    formData.append('file', fileInput.files[0]);
+        
+                    const response = await fetch('/predict', {
+                        method: 'POST',
+                        body: formData
+                    });
+        
+                    const result = await response.json();
+                    document.getElementById('result').innerText = '' + result.prediction;
+        
+                    // Menampilkan gambar yang diunggah
+                    const imageUrl = URL.createObjectURL(fileInput.files[0]);
+                    const imagePreview = document.getElementById('imagePreview');
+                    imagePreview.innerHTML = `<img src="${imageUrl}" alt="Uploaded Image">`;
+        
+                    // Menampilkan recommendation
+                    let recommendationText = '';
+                    if (result.recommendation) {
+                        recommendationText = result.recommendation;
+                    }
+                    document.getElementById('recommendation').innerHTML = recommendationText;
+                });
+        
+                document.getElementById('resetButton').addEventListener('click', function() {
+                    document.getElementById('fileInput').value = '';
+                    document.getElementById('result').innerText = '';
+                    document.getElementById('recommendation').innerText = '';
+                    document.getElementById('imagePreview').innerHTML = '';
+                });
+            </script>
+
+
+              <!-- <form id="uploadForm">
+                    <button class="btn btn-primary" id="resetButton">Reset</button>
+                </form> --> 
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- E N D  P R I C I N G -->
+
+  <!-- C A L L  T O  A C T I O N -->
+  <section id="call-to-action">
+    <div class="container text-center">
+      <h2>Mulai Untuk Mengonsumsi Daging Yang Segar Dimulai dari Sekarang!</h2>
+      <div class="title-block ">
+        <p>Daging yang Segar lebih layak untuk dikonsumsi untuk jangka panjang kesehatan kita!</p>
+        <a href="#hero" class="btn btn-regular">Mulai</a>
+      </div>
+    </div>
+  </section>
+  <!-- E N D  C A L L  T O  A C T I O N -->
+
+  <!--  F O O T E R  -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>Informasi Lainnya</h5>
+          <ul>
+            <li><a href="#">Daging Sapi</a></li>
+            <li><a href="#">Deteksi Kesegaran Daging</a></li>
+            <li><a href="#">Klasifkasi Kesegaran Daging</a></li>
+            <li><a href="#">GLCM</a></li>
+            <li><a href="#">KNN</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Main Tools</h5>
+          <ul>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">Html</a></li>
+            <li><a href="#">Vs Code</a></li>
+            <li><a href="#">Flask</a></li>
+            <li><a href="#">Ipynb</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Blog</h5>
+          <ul>
+            <li><a href="https://www.siamiruyelindo.ac.id/">STIKOM Uyelindo</a></li>
+            <li><a href="https://www.siamiruyelindo.ac.id/">STIKOM Uyelindo</a></li>
+            <li><a href="https://www.siamiruyelindo.ac.id/">STIKOM Uyelindo</a></li>
+            <li><a href="https://www.siamiruyelindo.ac.id/">Siamir Uyelindo</a></li>
+            <li><a href="https://www.siamiruyelindo.ac.id/">Siamir Uyelindo</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Campus</h5>
+          <p>STIKOM Uyelindo Kupang Merupakan Perguruan Tinggi berbasis teknologi dan komunkasi pertama dan terbaik di Nusa Tenggara Timur. Jurusan Teknik Informatika S1 Merupakan Program Study yang ditempuh oleh developer selaku mahasiswa.</p>
+          <p><a href="mailto:KrisasyenTukaHapo@gmail.com" class="external-links">KrisasyenTukaHapo@gmail.com</a></p>
+        </div>
+      </div> 
+      <div class="divider"></div>
+      <div class="row">
+        <div class="col-md-6 col-xs-12">
+            <a href="#"><i class="icon ion-logo-facebook"></i></a>
+            <a href="#"><i class="icon ion-logo-instagram"></i></a>
+            <a href="#"><i class="icon ion-logo-twitter"></i></a>
+            <a href="#"><i class="icon ion-logo-youtube"></i></a>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <small>2024 &copy; All rights reserved. Made by <a href="#" target="blank" class="external-links">Krisasyen Tuka Hapo</a></small>
+          </div>
+      </div>
+    </div>
+  </footer>
+  <!--  E N D  F O O T E R  -->
+    
+
+    <!-- External JavaScripts -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  
+
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById('fileInput');
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            const response = await fetch('/predict', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+            document.getElementById('result').innerText = '' + result.prediction;
+
+            // Menampilkan gambar yang diunggah
+            const imageUrl = URL.createObjectURL(fileInput.files[0]);
+            const imagePreview = document.getElementById('imagePreview');
+            imagePreview.innerHTML = `<img src="${imageUrl}" alt="Uploaded Image">`;
+
+            // Menampilkan recommendation
+            let recommendationText = '';
+            if (result.recommendation) {
+                recommendationText = result.recommendation;
+            }
+            document.getElementById('recommendation').innerHTML = recommendationText;
+        });
+
+        document.getElementById('resetButton').addEventListener('click', function() {
+            document.getElementById('fileInput').value = '';
+            document.getElementById('result').innerText = '';
+            document.getElementById('recommendation').innerText = '';
+            document.getElementById('imagePreview').innerHTML = '';
+        });
+    </script>
+
+
+    <!--  E N D  F O O T E R  -->
+    
+
+    <!-- External JavaScripts -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  
+
+</body>
+</html>
